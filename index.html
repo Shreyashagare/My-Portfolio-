@@ -3,112 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyash Agare - Portfolio</title>
+    <title>Shreyash Portfolio 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#ef8354',
-                        secondary: '#2d3142',
-                        accent: '#f4f0eb',
-                        cream: '#f8f6f3',
-                        gray: '#909096'
-                    },
-                    fontFamily: {
-                        'chubbo': ['Chubbo', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif'],
-                        'lato': ['Lato', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @font-face {
-            font-family: 'Chubbo';
-            src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-            font-weight: 400;
-        }
-        @font-face {
-            font-family: 'Chubbo';
-            src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-            font-weight: 700;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-accent font-chubbo">
+<body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream shadow-lg mx-4 mt-4 rounded-[20px] px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="text-2xl font-bold text-secondary">Shreyash</div>
-            <div class="hidden md:flex items-center space-x-10">
-                <a href="#projects" class="text-2xl font-bold text-secondary hover:text-primary transition-colors">Projects</a>
-                <a href="#about" class="text-2xl font-bold text-secondary hover:text-primary transition-colors">About</a>
-                <a href="#connect" class="text-2xl font-bold text-secondary hover:text-primary transition-colors">Connect</a>
-                <button class="bg-primary text-secondary px-4 py-2 rounded-[15px] text-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-colors">
-                    Resume
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+    <nav class="navbar fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-blue-600">
+                    <a href="#home">Shreyash</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle md:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-secondary" id="mobile-menu-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
         </div>
-        <!-- Mobile menu -->
-        <div class="md:hidden hidden mt-4 space-y-4" id="mobile-menu">
-            <a href="#projects" class="block text-xl font-bold text-secondary hover:text-primary transition-colors">Projects</a>
-            <a href="#about" class="block text-xl font-bold text-secondary hover:text-primary transition-colors">About</a>
-            <a href="#connect" class="block text-xl font-bold text-secondary hover:text-primary transition-colors">Connect</a>
-            <button class="bg-primary text-secondary px-4 py-2 rounded-[15px] text-xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-colors">
-                Resume
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden">
+            <div class="container mx-auto px-4 py-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-600">Skills</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-blue-600">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 md:px-20">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h1 class="text-5xl md:text-6xl font-bold text-secondary">
-                        👋 Hello,
-                    </h1>
-                    <div class="text-5xl md:text-6xl font-bold text-secondary">
-                        <p>I am <span class="line-through font-normal">SHER</span></p>
-                    </div>
-                    <h2 class="text-6xl md:text-8xl font-bold text-secondary leading-tight">
-                        Shreyash Agare
-                    </h2>
-                    <p class="text-2xl md:text-3xl text-secondary">
-                        A Multi-disciplinary designer who collaborates with
-                    </p>
-                    <div class="flex flex-wrap gap-4 items-center">
-                        <span class="text-3xl text-secondary">Recruiter</span>
-                        <span class="text-3xl text-gray">Product Managers</span>
-                        <span class="text-3xl text-secondary opacity-50">Developers</span>
-                    </div>
-                    <div class="w-36 h-1 bg-primary rounded-full"></div>
-                    <p class="text-2xl md:text-3xl text-secondary leading-relaxed max-w-4xl">
-                        I'm Shreyash, a designer studying Humanizing Technology at NMIMS. I create thoughtful, 
-                        <span class="font-bold text-primary">user-centered</span> experiences that 
-                        <span class="font-bold text-primary">blend tech, storytelling,</span> and 
-                        <span class="font-bold text-primary">systems thinking</span> to spark meaningful change.
-                    </p>
+    <section id="home" class="hero min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
+                    Hi, I'm <span class="text-blue-600">Shreyash</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Full Stack Developer & UI/UX Designer creating amazing digital experiences
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="btn-primary">
+                        <i class="fas fa-eye mr-2"></i>View My Work
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-envelope mr-2"></i>Get In Touch
+                    </a>
                 </div>
-                <div class="relative">
-                    <div class="w-full h-[583px] bg-cover bg-center rounded-lg shadow-2xl" 
-                         style="background-image: url('80696da999bef16890cc8dec02be35dea5ff4c7d.png')">
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i class="fas fa-chevron-down text-gray-400 text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="about-image-container">
+                        <img src="images/profile.jpg" alt="Shreyash" class="about-image" 
+                             onerror="this.src='https://via.placeholder.com/400x500/3B82F6/FFFFFF?text=Shreyash'">
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Passionate Developer & Designer</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a creative and detail-oriented developer with a passion for building beautiful, 
+                        functional, and user-centered digital experiences. With 3+ years of experience in 
+                        web development, I am always looking for new and innovative ways to bring my clients' 
+                        visions to life.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        I believe that design is about more than just making things look pretty – it's about 
+                        solving problems and creating intuitive, enjoyable experiences for users.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="stat-item">
+                            <div class="text-3xl font-bold text-blue-600">50+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="text-3xl font-bold text-blue-600">3+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="text-3xl font-bold text-blue-600">30+</div>
+                            <div class="text-gray-600">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="text-3xl font-bold text-blue-600">24/7</div>
+                            <div class="text-gray-600">Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">My Skills</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    I specialize in modern web technologies and design tools to create exceptional digital experiences.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend Development -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-code text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Frontend Development</h3>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Tailwind CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Development -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-server text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Backend Development</h3>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Design & Tools -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Design & Tools</h3>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Adobe XD</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Photoshop</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,227 +246,324 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 md:px-20">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-secondary text-center mb-16">Projects</h2>
-            
-            <!-- Project 1 -->
-            <div class="bg-cream rounded-xl shadow-2xl p-8 mb-12">
-                <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div class="space-y-6">
-                        <h3 class="text-3xl md:text-4xl font-bold text-black">
-                            Safety and wellbeing of construction workers
-                        </h3>
-                        <p class="text-xl md:text-2xl text-secondary">
-                            A System design for a construction site
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">System Design</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Interaction design</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Product Design</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Physical Computing</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Design Research</span>
-                        </div>
-                        <button class="bg-yellow-400 text-black px-6 py-3 rounded-xl text-2xl font-bold hover:bg-yellow-500 transition-colors">
-                            View Project
-                        </button>
-                    </div>
-                    <div class="relative">
-                        <div class="w-full h-[385px] bg-cover bg-center rounded-lg" 
-                             style="background-image: url('45f120fd6952607787e03210258f57297cac9a77.png')">
-                        </div>
-                        <div class="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg">
-                            <span class="text-2xl font-bold text-black">B2B</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="bg-cream rounded-xl shadow-2xl p-8 mb-12">
-                <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div class="space-y-6">
-                        <h3 class="text-3xl md:text-4xl font-bold text-black">
-                            Highway Hypnosis - Raahi
-                        </h3>
-                        <p class="text-xl md:text-2xl text-secondary">
-                            Behavioral design regarding micro sleeps
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Behavioral design</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Product Design</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Physical Computing</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Design Research</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Interaction design</span>
-                        </div>
-                        <button class="bg-blue-500 text-white px-6 py-3 rounded-xl text-2xl font-bold hover:bg-blue-600 transition-colors">
-                            View Project
-                        </button>
-                    </div>
-                    <div class="relative">
-                        <div class="w-full h-[379px] bg-cover bg-center rounded-lg" 
-                             style="background-image: url('ad6b2301b6cb9d285dfebd22c218f36be22bf52b.png')">
-                        </div>
-                        <div class="absolute top-4 right-4 bg-black px-4 py-2 rounded-lg">
-                            <span class="text-2xl font-bold text-white">B2B</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="bg-cream rounded-xl shadow-2xl p-8 mb-12">
-                <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div class="space-y-6">
-                        <h3 class="text-3xl md:text-4xl font-bold text-black">
-                            Highway Hypnosis - Raahi
-                        </h3>
-                        <p class="text-xl md:text-2xl text-secondary">
-                            Behavioral design regarding micro sleeps
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Behavioral design</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Product Design</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Physical Computing</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Design Research</span>
-                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Interaction design</span>
-                        </div>
-                        <button class="bg-purple-500 text-white px-6 py-3 rounded-xl text-2xl font-bold hover:bg-purple-600 transition-colors">
-                            View Project
-                        </button>
-                    </div>
-                    <div class="relative">
-                        <div class="w-full h-[379px] bg-cover bg-center rounded-lg" 
-                             style="background-image: url('ad6b2301b6cb9d285dfebd22c218f36be22bf52b.png')">
-                        </div>
-                        <div class="absolute top-4 right-4 bg-black px-4 py-2 rounded-lg">
-                            <span class="text-2xl font-bold text-white">B2B</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Show More Button -->
-            <div class="text-center">
-                <button class="bg-cream border border-black px-6 py-3 rounded-xl text-2xl font-bold hover:bg-gray-100 transition-colors flex items-center gap-2 mx-auto">
-                    show more
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 md:px-20">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-secondary mb-8">About</h2>
-            <p class="text-2xl md:text-3xl text-secondary mb-8">
-                Do you have time ?
-            </p>
-            
-            <div class="space-y-8">
-                <div class="flex items-start gap-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                            <div class="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                        <span class="text-2xl md:text-3xl font-normal text-black">I'VE</span>
-                    </div>
-                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
-                        ... always believed design is more than aesthetics—it's a way to humanize technology.
-                    </p>
-                </div>
-
-                <div class="flex items-start gap-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                            <div class="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                        <span class="text-2xl md:text-3xl font-normal text-black">I'M</span>
-                    </div>
-                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
-                        ... Currently focused into <span class="font-bold text-primary">UX/UI, Interaction</span>, and 
-                        <span class="font-bold text-primary">System Design.</span> Coincidentally, all those skills I shamelessly brag about? Turns out—they're actually useful. 😎
-                    </p>
-                </div>
-
-                <div class="flex items-start gap-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                            <div class="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                        <span class="text-2xl md:text-3xl font-normal text-black">I'D</span>
-                    </div>
-                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
-                        ... Like to <span class="font-bold text-primary">work on project</span> where I know I can bring something to the table or should i say "The round table" No? , sorry?, ok. bad one
-                    </p>
-                </div>
-
-                <div class="flex items-start gap-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                            <div class="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                        <span class="text-2xl md:text-3xl font-normal text-black">I'LL</span>
-                    </div>
-                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
-                        ... Will be waiting for your mail at <span class="font-bold text-primary">shreyashagare26@gmail.com</span> — in case you love me (I know you do :) .
-                    </p>
-                </div>
-            </div>
-
-            <!-- Toolbar Section -->
-            <div class="mt-20">
-                <h3 class="text-5xl md:text-6xl font-bold text-secondary mb-8">
-                    <span class="font-normal">My</span> <span class="line-through font-normal">task</span> <span class="text-primary">Tool bar</span>
-                </h3>
-                <div class="bg-cream rounded-xl shadow-2xl p-8">
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('1e436c53e48b602e0e47aedbebe503b853259be8.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('f1995e734182ac073c52e1ad736c7a242e59d619.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('71c66773c0ded2144f02ea9ec76bfdf22a4b2b27.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('3c2c8de3487899e6f55ebcc9b4c3fdaa4eeda6e2.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('f15faaac19febf7a10b5d0387e94a4837b4228b1.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('84dd2995faf2db8bd099d028f046d66b17bc431a.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('9849c44300f053d3bd2223f8fce198adfb85ae1f.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('da5829594661a11039a1c70ca309f5f42f3c1f82.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('d930987eec4aa5d2d4c6ec3fae93aa7efb29518d.png')"></div>
-                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('73a14ac84745f7e5d5415ca19a56db5d46bfdbc1.png')"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Connect Section -->
-    <section id="connect" class="bg-secondary py-20 px-4 md:px-20">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="mb-12">
-                <div class="w-28 h-28 mx-auto mb-6">
-                    <img src="8b021954e520b3e0385c6ad40ea09773d37e2b01.svg" alt="Coffee icon" class="w-full h-full">
-                </div>
-                <h2 class="text-5xl md:text-6xl font-bold text-accent mb-6">
-                    Gab a Coffee & let's Talk
-                </h2>
-                <p class="text-2xl md:text-3xl text-accent">
-                    Always ready & open to talk, coz employment
+    <section id="projects" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">My Projects</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Here are some of my recent projects that showcase my skills and creativity.
                 </p>
             </div>
-
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <div class="w-26 h-26 rounded-[22px] border-2 border-white/50 flex items-center justify-center">
-                    <img src="4bf325d0eae5587bea76caa8e48166cf640b6b71.svg" alt="Email icon" class="w-12 h-12">
+            
+            <!-- Project Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                <button class="filter-btn" onclick="filterProjects('web')">Web Apps</button>
+                <button class="filter-btn" onclick="filterProjects('mobile')">Mobile Apps</button>
+                <button class="filter-btn" onclick="filterProjects('design')">UI/UX Design</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-item fade-in" data-category="web">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project1.jpg" alt="E-commerce Platform" 
+                                 onerror="this.src='https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=E-commerce+Platform'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">A full-stack e-commerce platform with payment integration and admin dashboard.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-transparent border-2 border-white/50 rounded-[22px] px-6 py-3">
-                    <p class="text-3xl md:text-4xl text-white">
-                        shreyashagare26@gmail.com
-                    </p>
+                
+                <!-- Project 2 -->
+                <div class="project-item fade-in" data-category="mobile">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project2.jpg" alt="Fitness Tracker App" 
+                                 onerror="this.src='https://via.placeholder.com/400x250/10B981/FFFFFF?text=Fitness+Tracker+App'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Fitness Tracker App</h3>
+                            <p class="text-gray-600 mb-4">A mobile app for tracking workouts, nutrition, and fitness goals.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Charts.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-item fade-in" data-category="design">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project3.jpg" alt="Banking App UI Design" 
+                                 onerror="this.src='https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=Banking+App+UI+Design'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-figma"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Banking App UI Design</h3>
+                            <p class="text-gray-600 mb-4">Modern banking app interface with intuitive user experience design.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Prototyping</span>
+                                <span class="tech-tag">UI/UX</span>
+                                <span class="tech-tag">Design System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-item fade-in" data-category="web">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project4.jpg" alt="Task Management System" 
+                                 onerror="this.src='https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=Task+Management+System'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Task Management System</h3>
+                            <p class="text-gray-600 mb-4">Collaborative task management platform with real-time updates.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-item fade-in" data-category="mobile">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project5.jpg" alt="Weather App" 
+                                 onerror="this.src='https://via.placeholder.com/400x250/06B6D4/FFFFFF?text=Weather+App'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Weather App</h3>
+                            <p class="text-gray-600 mb-4">Beautiful weather app with location-based forecasts and animations.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Weather API</span>
+                                <span class="tech-tag">Animations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-item fade-in" data-category="design">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project6.jpg" alt="Restaurant Website Design" 
+                                 onerror="this.src='https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Restaurant+Website+Design'">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fab fa-figma"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Restaurant Website Design</h3>
+                            <p class="text-gray-600 mb-4">Elegant restaurant website with online ordering system design.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Web Design</span>
+                                <span class="tech-tag">Responsive</span>
+                                <span class="tech-tag">Branding</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    I'm always interested in hearing about new projects and opportunities. 
+                    Let's work together to bring your ideas to life!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Let's Connect</h3>
+                    <p class="text-gray-600 mb-8">
+                        I'm currently available for freelance work and full-time opportunities. 
+                        Feel free to reach out if you'd like to discuss a project or just say hello!
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">shreyash@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Phone</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Location</h4>
+                                <p class="text-gray-600">Mumbai, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <form onsubmit="handleContactForm(event)" class="contact-form">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mb-6">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group mb-6">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4">Shreyash</div>
+                <p class="text-gray-400 mb-6 max-w-md mx-auto">
+                    Creating digital experiences that inspire and engage. 
+                    Let's build something amazing together.
+                </p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="footer-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-gray-400">
+                        © 2025 Shreyash. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
