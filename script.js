@@ -1,165 +1,158 @@
-// Smooth scrolling for navigation links
+// Content for different audiences
+const audienceContent = {
+    recruiter: {
+        text: "I'm Shreyash, a designer studying Humanizing Technology at NMIMS. I create thoughtful, <span class='highlight'>user-centered</span> experiences that <span class='highlight'>blend tech</span>, <span class='highlight'>storytelling</span>, and <span class='highlight'>systems thinking</span> to spark meaningful change."
+    },
+    "product-managers": {
+        text: "I'm Shreyash, a designer who understands the <span class='highlight'>business impact</span> of design decisions. I create <span class='highlight'>scalable solutions</span> that balance <span class='highlight'>user needs</span> with <span class='highlight'>product goals</span>, ensuring every design choice drives measurable value."
+    },
+    developers: {
+        text: "I'm Shreyash, a designer who speaks your language. I create <span class='highlight'>feasible designs</span> that work with your <span class='highlight'>technical constraints</span>, write clean <span class='highlight'>design specs</span>, and collaborate seamlessly to build <span class='highlight'>exceptional products</span> together."
+    }
+};
+
+// DOM elements
+const tabButtons = document.querySelectorAll('.tab-btn');
+const dynamicText = document.getElementById('dynamic-text');
+
+// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll for navigation links
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    initializeTabs();
+    addSmoothTransitions();
+});
+
+// Tab switching functionality
+function initializeTabs() {
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update content
+            const audience = this.getAttribute('data-audience');
+            updateContent(audience);
         });
     });
+}
 
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    // Observe all elements with fade-in class
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach(el => observer.observe(el));
-
-    // Mobile menu toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    
-    if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    }
-
-    // Close mobile menu when clicking on a link
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (mobileMenu) {
-                mobileMenu.classList.remove('active');
-            }
-            if (mobileMenuToggle) {
-                mobileMenuToggle.classList.remove('active');
-            }
-        });
-    });
-
-    // Navbar background on scroll
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    }
-
-    // Typing animation for hero text
-    function typeWriter(element, text, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
+function updateContent(audience) {
+    const content = audienceContent[audience];
+    if (content) {
+        // Fade out effect
+        dynamicText.style.opacity = '0';
+        dynamicText.style.transform = 'translateY(10px)';
         
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        type();
+        setTimeout(() => {
+            dynamicText.innerHTML = content.text;
+            // Fade in effect
+            dynamicText.style.opacity = '1';
+            dynamicText.style.transform = 'translateY(0)';
+        }, 200);
     }
+}
 
-    // Initialize typing animation if hero text exists
-    const heroText = document.querySelector('.hero-text');
-    if (heroText) {
-        const text = heroText.getAttribute('data-text') || 'Welcome to my portfolio';
-        typeWriter(heroText, text);
+// Add smooth transitions to elements
+function addSmoothTransitions() {
+    // Set initial state for dynamic text
+    dynamicText.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    
+    // Add fade-in animations for page load
+    const elements = document.querySelectorAll('.greeting, .name-section, .subtitle, .collaboration-tabs, #dynamic-text');
+    elements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }, index * 150);
+    });
+}
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Navbar background on scroll
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.backgroundColor = 'rgba(248, 246, 243, 0.95)';
+    } else {
+        navbar.style.backdropFilter = 'none';
+        navbar.style.backgroundColor = '#f8f6f3';
     }
 });
 
-// Form handling
-function handleContactForm(event) {
-    event.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(event.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Basic validation
-    if (!name || !email || !message) {
-        alert('Please fill in all fields');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-    
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', { name, email, message });
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    event.target.reset();
-}
+// Resume button functionality
+document.querySelector('.resume-btn').addEventListener('click', function() {
+    // Add your resume download logic here
+    console.log('Resume download clicked');
+});
 
-// Project filter functionality
-function filterProjects(category) {
-    const projects = document.querySelectorAll('.project-item');
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    
-    // Update active filter button
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
-    // Filter projects
-    projects.forEach(project => {
-        const projectCategory = project.getAttribute('data-category');
-        if (category === 'all' || projectCategory === category) {
-            project.style.display = 'block';
-            project.classList.add('fade-in');
-        } else {
-            project.style.display = 'none';
-            project.classList.remove('fade-in');
+// Keyboard navigation for accessibility
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+        // Handle tab navigation
+        const focusableElements = document.querySelectorAll('button, a, input, textarea, select');
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        
+        if (e.shiftKey && document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
         }
-    });
+    }
+});
+
+// Touch support for mobile devices
+let touchStartY = 0;
+let touchEndY = 0;
+
+document.addEventListener('touchstart', function(e) {
+    touchStartY = e.changedTouches[0].screenY;
+});
+
+document.addEventListener('touchend', function(e) {
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartY - touchEndY;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        // Handle swipe gestures if needed
+        console.log('Swipe detected:', diff > 0 ? 'up' : 'down');
+    }
 }
 
-// Lazy loading for images
-function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
+// Add hover effects for better interactivity
+document.querySelectorAll('.nav-link, .resume-btn, .tab-btn').forEach(element => {
+    element.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
     });
-
-    images.forEach(img => imageObserver.observe(img));
-}
-
-// Initialize lazy loading
-document.addEventListener('DOMContentLoaded', lazyLoadImages); 
+    
+    element.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
