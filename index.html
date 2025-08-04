@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyash Agare - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ef8354',
+                        secondary: '#2d3142',
+                        accent: '#f4f0eb',
+                        cream: '#f8f6f3',
+                        gray: '#909096'
+                    },
+                    fontFamily: {
+                        'chubbo': ['Chubbo', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                        'lato': ['Lato', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Chubbo';
+            src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Chubbo';
+            src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-accent font-chubbo">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream shadow-lg mx-4 mt-4 rounded-[20px] px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold text-secondary">Shreyash</div>
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#projects" class="text-2xl font-bold text-secondary hover:text-primary transition-colors">Projects</a>
+                <a href="#about" class="text-2xl font-bold text-secondary hover:text-primary transition-colors">About</a>
+                <a href="#connect" class="text-2xl font-bold text-secondary hover:text-primary transition-colors">Connect</a>
+                <button class="bg-primary text-secondary px-4 py-2 rounded-[15px] text-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-colors">
+                    Resume
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-secondary" id="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden mt-4 space-y-4" id="mobile-menu">
+            <a href="#projects" class="block text-xl font-bold text-secondary hover:text-primary transition-colors">Projects</a>
+            <a href="#about" class="block text-xl font-bold text-secondary hover:text-primary transition-colors">About</a>
+            <a href="#connect" class="block text-xl font-bold text-secondary hover:text-primary transition-colors">Connect</a>
+            <button class="bg-primary text-secondary px-4 py-2 rounded-[15px] text-xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-colors">
+                Resume
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-5xl md:text-6xl font-bold text-secondary">
+                        👋 Hello,
+                    </h1>
+                    <div class="text-5xl md:text-6xl font-bold text-secondary">
+                        <p>I am <span class="line-through font-normal">SHER</span></p>
+                    </div>
+                    <h2 class="text-6xl md:text-8xl font-bold text-secondary leading-tight">
+                        Shreyash Agare
+                    </h2>
+                    <p class="text-2xl md:text-3xl text-secondary">
+                        A Multi-disciplinary designer who collaborates with
+                    </p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <span class="text-3xl text-secondary">Recruiter</span>
+                        <span class="text-3xl text-gray">Product Managers</span>
+                        <span class="text-3xl text-secondary opacity-50">Developers</span>
+                    </div>
+                    <div class="w-36 h-1 bg-primary rounded-full"></div>
+                    <p class="text-2xl md:text-3xl text-secondary leading-relaxed max-w-4xl">
+                        I'm Shreyash, a designer studying Humanizing Technology at NMIMS. I create thoughtful, 
+                        <span class="font-bold text-primary">user-centered</span> experiences that 
+                        <span class="font-bold text-primary">blend tech, storytelling,</span> and 
+                        <span class="font-bold text-primary">systems thinking</span> to spark meaningful change.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-[583px] bg-cover bg-center rounded-lg shadow-2xl" 
+                         style="background-image: url('80696da999bef16890cc8dec02be35dea5ff4c7d.png')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold text-secondary text-center mb-16">Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="bg-cream rounded-xl shadow-2xl p-8 mb-12">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl md:text-4xl font-bold text-black">
+                            Safety and wellbeing of construction workers
+                        </h3>
+                        <p class="text-xl md:text-2xl text-secondary">
+                            A System design for a construction site
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">System Design</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Interaction design</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Product Design</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Physical Computing</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Design Research</span>
+                        </div>
+                        <button class="bg-yellow-400 text-black px-6 py-3 rounded-xl text-2xl font-bold hover:bg-yellow-500 transition-colors">
+                            View Project
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <div class="w-full h-[385px] bg-cover bg-center rounded-lg" 
+                             style="background-image: url('45f120fd6952607787e03210258f57297cac9a77.png')">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg">
+                            <span class="text-2xl font-bold text-black">B2B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-cream rounded-xl shadow-2xl p-8 mb-12">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl md:text-4xl font-bold text-black">
+                            Highway Hypnosis - Raahi
+                        </h3>
+                        <p class="text-xl md:text-2xl text-secondary">
+                            Behavioral design regarding micro sleeps
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Behavioral design</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Product Design</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Physical Computing</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Design Research</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Interaction design</span>
+                        </div>
+                        <button class="bg-blue-500 text-white px-6 py-3 rounded-xl text-2xl font-bold hover:bg-blue-600 transition-colors">
+                            View Project
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <div class="w-full h-[379px] bg-cover bg-center rounded-lg" 
+                             style="background-image: url('ad6b2301b6cb9d285dfebd22c218f36be22bf52b.png')">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black px-4 py-2 rounded-lg">
+                            <span class="text-2xl font-bold text-white">B2B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-cream rounded-xl shadow-2xl p-8 mb-12">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl md:text-4xl font-bold text-black">
+                            Highway Hypnosis - Raahi
+                        </h3>
+                        <p class="text-xl md:text-2xl text-secondary">
+                            Behavioral design regarding micro sleeps
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Behavioral design</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Product Design</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Physical Computing</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Design Research</span>
+                            <span class="px-3 py-1 border border-black rounded-xl text-lg">Interaction design</span>
+                        </div>
+                        <button class="bg-purple-500 text-white px-6 py-3 rounded-xl text-2xl font-bold hover:bg-purple-600 transition-colors">
+                            View Project
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <div class="w-full h-[379px] bg-cover bg-center rounded-lg" 
+                             style="background-image: url('ad6b2301b6cb9d285dfebd22c218f36be22bf52b.png')">
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black px-4 py-2 rounded-lg">
+                            <span class="text-2xl font-bold text-white">B2B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="text-center">
+                <button class="bg-cream border border-black px-6 py-3 rounded-xl text-2xl font-bold hover:bg-gray-100 transition-colors flex items-center gap-2 mx-auto">
+                    show more
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold text-secondary mb-8">About</h2>
+            <p class="text-2xl md:text-3xl text-secondary mb-8">
+                Do you have time ?
+            </p>
+            
+            <div class="space-y-8">
+                <div class="flex items-start gap-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                            <div class="w-8 h-8 bg-white rounded-full"></div>
+                        </div>
+                        <span class="text-2xl md:text-3xl font-normal text-black">I'VE</span>
+                    </div>
+                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
+                        ... always believed design is more than aesthetics—it's a way to humanize technology.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                            <div class="w-8 h-8 bg-white rounded-full"></div>
+                        </div>
+                        <span class="text-2xl md:text-3xl font-normal text-black">I'M</span>
+                    </div>
+                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
+                        ... Currently focused into <span class="font-bold text-primary">UX/UI, Interaction</span>, and 
+                        <span class="font-bold text-primary">System Design.</span> Coincidentally, all those skills I shamelessly brag about? Turns out—they're actually useful. 😎
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                            <div class="w-8 h-8 bg-white rounded-full"></div>
+                        </div>
+                        <span class="text-2xl md:text-3xl font-normal text-black">I'D</span>
+                    </div>
+                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
+                        ... Like to <span class="font-bold text-primary">work on project</span> where I know I can bring something to the table or should i say "The round table" No? , sorry?, ok. bad one
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                            <div class="w-8 h-8 bg-white rounded-full"></div>
+                        </div>
+                        <span class="text-2xl md:text-3xl font-normal text-black">I'LL</span>
+                    </div>
+                    <p class="text-2xl md:text-3xl text-black leading-relaxed max-w-4xl">
+                        ... Will be waiting for your mail at <span class="font-bold text-primary">shreyashagare26@gmail.com</span> — in case you love me (I know you do :) .
+                    </p>
+                </div>
+            </div>
+
+            <!-- Toolbar Section -->
+            <div class="mt-20">
+                <h3 class="text-5xl md:text-6xl font-bold text-secondary mb-8">
+                    <span class="font-normal">My</span> <span class="line-through font-normal">task</span> <span class="text-primary">Tool bar</span>
+                </h3>
+                <div class="bg-cream rounded-xl shadow-2xl p-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('1e436c53e48b602e0e47aedbebe503b853259be8.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('f1995e734182ac073c52e1ad736c7a242e59d619.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('71c66773c0ded2144f02ea9ec76bfdf22a4b2b27.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('3c2c8de3487899e6f55ebcc9b4c3fdaa4eeda6e2.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('f15faaac19febf7a10b5d0387e94a4837b4228b1.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('84dd2995faf2db8bd099d028f046d66b17bc431a.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('9849c44300f053d3bd2223f8fce198adfb85ae1f.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('da5829594661a11039a1c70ca309f5f42f3c1f82.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('d930987eec4aa5d2d4c6ec3fae93aa7efb29518d.png')"></div>
+                        <div class="w-16 h-16 bg-cover bg-center rounded-lg" style="background-image: url('73a14ac84745f7e5d5415ca19a56db5d46bfdbc1.png')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="bg-secondary py-20 px-4 md:px-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="mb-12">
+                <div class="w-28 h-28 mx-auto mb-6">
+                    <img src="8b021954e520b3e0385c6ad40ea09773d37e2b01.svg" alt="Coffee icon" class="w-full h-full">
+                </div>
+                <h2 class="text-5xl md:text-6xl font-bold text-accent mb-6">
+                    Gab a Coffee & let's Talk
+                </h2>
+                <p class="text-2xl md:text-3xl text-accent">
+                    Always ready & open to talk, coz employment
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <div class="w-26 h-26 rounded-[22px] border-2 border-white/50 flex items-center justify-center">
+                    <img src="4bf325d0eae5587bea76caa8e48166cf640b6b71.svg" alt="Email icon" class="w-12 h-12">
+                </div>
+                <div class="bg-transparent border-2 border-white/50 rounded-[22px] px-6 py-3">
+                    <p class="text-3xl md:text-4xl text-white">
+                        shreyashagare26@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
