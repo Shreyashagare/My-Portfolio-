@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyash Portfolio</title>
+    <title>Shreyash Agare | Designer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">Shreyash</div>
@@ -15,24 +19,26 @@
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Connect</a>
-                <button class="resume-btn">
+                <a href="resume.pdf" download="Shreyash-Agare-Resume.pdf" class="resume-btn">
                     Resume
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 16L12 8M12 8L16 12M12 8L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                </button>
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="greeting">👋 Hello,</div>
-                <div class="name-section">
-                    <span>I am <s>SHER</s> <strong>Shreyash Agare</strong></span>
-                </div>
+                <p class="greeting">👋 Hello,</p>
+                <h1 class="name-section">
+                    <span>I am <s>SHER</s></span>
+                    <strong>Shreyash Agare</strong>
+                </h1>
                 <p class="subtitle">A Multi-disciplinary designer who collaborates with</p>
                 <div class="collaboration-tabs">
                     <button class="tab-btn active" data-audience="recruiter">Recruiter</button>
@@ -46,11 +52,7 @@
                 </p>
             </div>
             <div class="hero-avatar">
-                <div class="avatar-container">
-                    <img src="images/Avatar.png" alt="Avatar" id="avatar" class="avatar-image">
-                    <img src="images/Eyes.png" alt="Eyes" id="eyes" class="avatar-eyes">
-                    <img src="images/Hands.png" alt="Hands" id="hands" class="avatar-hands">
-                </div>
+                <img src="images/avatar- hero.png" alt="An illustration of Shreyash Agare waving" class="avatar-image">
             </div>
         </div>
     </section>
