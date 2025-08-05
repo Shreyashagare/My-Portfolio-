@@ -3,60 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyash Agare | Designer</title>
-
+    <title>Shreyash Agare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">Shreyash</div>
-            <div class="nav-links">
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Connect</a>
-                <a href="resume.pdf" download="Shreyash-Agare-Resume.pdf" class="resume-btn">
-                    Resume
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">Shreyash</div>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                    <li><a href="Resume.pdf" class="resume-button" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <p class="greeting">👋 Hello,</p>
-                <h1 class="name-section">
-                    <span>I am <s>SHER</s></span>
-                    <strong>Shreyash Agare</strong>
-                </h1>
-                <p class="subtitle">A Multi-disciplinary designer who collaborates with</p>
-                <div class="collaboration-tabs">
-                    <button class="tab-btn active" data-audience="recruiter">Recruiter</button>
-                    <button class="tab-btn" data-audience="product-managers">Product Managers</button>
-                    <button class="tab-btn" data-audience="developers">Developers</button>
+        <main>
+            <section id="hero">
+                <div class="hero-text">
+                    <p class="intro">Hello,</p>
+                    <h1>I am <span class="highlight-text"><strike>SHER</strike></span> Shreyash Agare</h1>
+                    <p class="subtitle">A Multi-disciplinary designer who collaborates with</p>
+                    <div class="collaboration">
+                        <span id="recruiter">Recruiter</span>
+                        <span id="pm">Product Managers</span>
+                        <span id="dev">Developers</span>
+                    </div>
+                    <p id="description" class="description">I'm Shreyash, a designer studying Humanizing Technology at NMIMS. I create thoughtful, user-centered experiences that blend tech, storytelling, and systems thinking to spark meaningful change.</p>
                 </div>
-                <p id="dynamic-text">
-                    I'm Shreyash, a designer studying Humanizing Technology at NMIMS. I create thoughtful, 
-                    <span class="highlight">user-centered</span> experiences that <span class="highlight">blend tech</span>, 
-                    <span class="highlight">storytelling</span>, and <span class="highlight">systems thinking</span> to spark meaningful change.
-                </p>
-            </div>
-            <div class="hero-avatar">
-                <img src="images/avatar- hero.png" alt="An illustration of Shreyash Agare waving" class="avatar-image">
+                <div class="hero-image">w
+                    <img src="images/hero-image.png" alt="Shreyash Agare" class="hero-image-main">
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Safety and wellbeing of construction workers</h3>
+                        <p>A System design for a construction site</p>
+                        <div class="tags">
+                            <span>System Design</span>
+                            <span>Interaction design</span>
+                            <span>Design Research</span>
+                            <span>Product Design</span>
+                            <span>Physical Computing</span>
+                        </div>
+                        <a href="connected.pdf" target="_blank" class="view-project yellow">View Project</a>
+                    </div>
+                    <div class="project-image-container">
+                        <div class="project-tag b2b-yellow">B2B</div>
+                        <img src="images/project-1.png" alt="Safety and wellbeing of construction workers project">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Highway Hypnosis - Raahi</h3>
+                        <p>Behavioral design regarding micro sleeps</p>
+                        <div class="tags">
+                            <span>Behavioral design</span>
+                            <span>Design Research</span>
+                            <span>Product Design</span>
+                            <span>Physical Computing</span>
+                            <span>Interaction design</span>
+                        </div>
+                        <a href="raahi.pdf" target="_blank" class="view-project blue">View Project</a>
+                    </div>
+                    <div class="project-image-container">
+                        <div class="project-tag b2b-blue">B2B</div>
+                        <img src="images/project-2.png" alt="Highway Hypnosis - Raahi project">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Highway Hypnosis - Raahi</h3>
+                        <p>Behavioral design regarding micro sleeps</p>
+                        <div class="tags">
+                            <span>Behavioral design</span>
+                            <span>Design Research</span>
+                            <span>Product Design</span>
+                            <span>Physical Computing</span>
+                            <span>Interaction design</span>
+                        </div>
+                        <a href="#" class="view-project purple">View Project</a>
+                    </div>
+                    <div class="project-image-container">
+                        <div class="project-tag b2b-purple">B2B</div>
+                        <img src="images/project-3.png" alt="Highway Hypnosis - Raahi project">
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="about-header">
+                    <h2>About</h2>
+                    <div class="toggle-switch-container">
+                        <span>Do you have time?</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span>show more</span>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <p><span>I'VE</span> always believed design is more than aesthetics-it's a way to humanize technology.</p>
+                    <p><span>I'M</span> Currently focused into UX/UI, Interaction, and System Design. Coincidentally, all those skills I shamelessly brag about? Turns out- they're actually useful. 😉</p>
+                    <p><span>I'D</span> Like to work on project where I know I can bring something to the table or should i say " The round table" No?, sorry?, ok. bad one</p>
+                    <p><span>I'LL</span> Will be waiting for your mail at shreyashagare26@gmail.com - in case you love me (I know you do :).</p>
+                </div>
+            </section>
+
+            </main>
+
+            <section id="toolbar">
+                <h3>My <strike>task</strike> <span class="toolbar-highlight">Tool bar</span></h3>
+                <div class="tools">
+                    <img src="images/tool-1.png" alt="Figma">
+                    <img src="images/tool-2.png" alt="Illustrator">
+                    <img src="images/tool-3.png" alt="Photoshop">
+                    <img src="images/tool-4.png" alt="After Effects">
+                    <img src="images/tool-5.png" alt="Premiere Pro">
+                    <img src="images/tool-6.png" alt="Blender">
+                    <img src="images/tool-7.png" alt="Spotify">
+                    <img src="images/tool-8.png" alt="Notion">
+                </div>
+            </section>
+    </div>
+
+    <footer id="connect">
+        <div class="footer-content">
+            <h2>Gab a Coffee & let's Talk</h2>
+            <p>Always ready & open to talk, coz employment</p>
+            <div class="contact">
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <span>shreyashagare26@gmail.com</span>
             </div>
         </div>
-    </section>
+    </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
